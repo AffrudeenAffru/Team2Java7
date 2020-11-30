@@ -1,0 +1,29 @@
+<app-body>
+
+</app-body>
+
+<!----prepaid-->
+<div class="container"><br>
+    <button type="button" class="btn btn-primary btn-lg btn-block" >Edit prepaid plans</button>
+    <form #adduserform="ngForm" (ngSubmit)="updatePrepaidformsubmit()">
+       
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="prepaid.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="emailId:">plan:</label>
+            <input type="text" class="form-control" required [(ngModel)]="prepaid.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">validity:</label>
+            <input type="text" class="form-control" required [(ngModel)]="prepaid.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">price:</label>
+        <input type="text" class="form-control" required [(ngModel)]="prepaid.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">Update plan</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistprepaid()">back</button>
+    </form>
+</div>

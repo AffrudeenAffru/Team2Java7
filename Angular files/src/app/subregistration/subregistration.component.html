@@ -1,0 +1,286 @@
+
+<header>
+
+    <nav class=" navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="abc" style="color: black;" >
+      <a class="navbar-brand" style="color:white" (click)="mainpage()"><button class="btn btn-dark">VoizFonica</button></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+              Prepaid
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+              <a class="dropdown-item" (click)="gotoplans()" >view plan </a>
+              <a class="dropdown-item" >prepaid to postpaid</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                Postpaid
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" (click)="gotobill()" >paybill</a>
+              <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                Dongle
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+              <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+                Help
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" (click)="contactus()">contact us</a>
+                <a class="dropdown-item"  data-toggle="modal" data-target="#contactus" (click)="faq()">FAQ</a>
+                <!-- <a class="dropdown-item" routerLink="/subchat">live chat </a> -->
+              </div>
+            </li>
+  
+  
+  
+  
+  
+  
+        </ul>
+        <ul class="navbar-nav ml-autoo">
+          <li class="nav-item">
+              <a class="nav-link" style="color: white;" (click)="reg()"> <i class="fa fa-user"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" (click)="log()"><i class="fa fa-sign-in"></i>Login</a>
+          </li>
+       </ul>
+        <!-- <form class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">register</button>
+        </form> -->
+      </div>
+    </nav>
+  
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<!-- 
+<div class="allpage" style="background-image: url(../../assets/images/log2.jpeg);">
+  <div class="container-fluid">
+  <div class="row">
+      <div style="height: 3vh;"></div>
+  </div>
+  <div class="row">
+      <div class="col-md-6 mb-4">         
+         
+      </div>
+
+
+      <div class="col-md-6 mb-4">
+      <div class="layout" >
+  
+          <form #RegisterForm="ngForm" (ngSubmit)="registerUser1()" >
+        
+      <div class="form-group">
+          <label for="email" ><strong style="color: teal;">Email id:</strong></label><br>
+          <input type="email" class="form-control"  
+           placeholder="enter email" name="email"[(ngModel)]="Subscriber.emailId" required
+           pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+           [class.is-invalid]="email.invalid && email.touched">
+          <div *ngIf="email.errors && (email.invalid && email.touched)">
+              <small class="text-danger" *ngIf="email.errors.required">Email Id is required field</small>
+              <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email id</small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="username"><strong style="color: teal;">Full name:</strong></label>
+          <input type="text" class="form-control" placeholder="Full name" name="username" 
+          [(ngModel)]="Subscriber.userName" #username="ngModel" required 
+          [class.is-invalid]="username.invalid && username.touched" >
+          <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required field</small>           
+      </div>
+      
+      
+
+<div class="form-group">
+  <label for="typeOfSubscriber"><strong style="color: teal;">Type of user</strong></label>
+  <input type="text" class="form-control" placeholder="Prepaid-Postpaid-Dongle" name="typeOfSubscriber" 
+  [(ngModel)]="Subscriber.typeOfSubscriber" #typeOfSubscriber="ngModel" required 
+  [class.is-invalid]="typeOfSubscriber.invalid && typeOfSubscriber.touched" >
+  <small class="text-danger" [class.d-none]="typeOfSubscriber.valid || typeOfSubscriber.untouched">TYpe of user is required field</small>           
+</div>
+
+
+<div class="form-group">
+  <label for="mobileNum"><strong style="color: teal;">Contact Number</strong></label>
+  <input type="text" class="form-control" placeholder="998764" name="mobileNum" 
+  [(ngModel)]="Subscriber.mobileNum" #mobileNum="ngModel" required 
+  [class.is-invalid]="mobileNum.invalid && mobileNum.touched" >
+  <small class="text-danger" [class.d-none]="mobileNum.valid || mobileNum.untouched">Type of user is required field</small>           
+</div>
+
+
+
+
+
+      <div class="form-group">
+          <label for="password"><strong style="color: teal;">Password:</strong></label><br>
+          <input type="password" class="form-control" placeholder="enter password" name="password" 
+          [(ngModel)]="Subscriber.password" #password="ngModel" required 
+          [class.is-invalid]="password.invalid && password.touched" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{5,}">                
+          <small class="text-danger" [class.d-none]="password.valid || password.untouched">
+              Must contain at least one  number and one uppercase and lowercase letter, and at least 5 or more characters</small>
+      </div> 
+
+      <div class="form-group">
+          <label for="password"><strong style="color: teal;">Confirm Password:</strong> </label><br>
+          <input type="password" class="form-control" 
+          placeholder="enter password again" name="cpassword" #cpassword="ngModel" (ngModel)="Subscriber.password" required 
+          [class.is-invalid]="cpassword.invalid && cpassword.touched">                
+          <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">
+              Password must be the same</small>
+      </div>
+      <form> <ngx-recaptcha2 #captchaElem [siteKey]="siteKey"></ngx-recaptcha2></form>                
+
+      <button type="submit" class="btn btn-info">Register</button>
+      <small class="float-right" [routerLink]="['/login']">
+          <button type="submit" class="btn btn-outline-info">login here</button>  
+      </small>        
+  </form>
+  </div>
+
+  </div>
+  <small class="text-danger">{{msg}}</small>  
+</div>
+</div>  -->
+
+
+
+<!-- <app-body></app-body> -->
+
+<div class="allpage" style="background-image: url(../../assets/images/log2.jpeg); height: 100%;width: 100%;">
+  <div class="container-fluid">
+  <div class="row">
+      <div style="height: 3vh;"></div>
+  </div>
+  <div class="row">
+      <div class="col-md-6 mb-4">         
+          <!-- <div >
+              <img src="../../assets/images/log3.jpg" style="width: 500px; height: 650px; align-items: top ;"> 
+          </div> -->
+      </div>
+
+
+      <div class="col-md-6 mb-4">
+      <div class="layout" >
+  
+          <form #RegisterForm="ngForm" (ngSubmit)="registerUser1()" >
+        
+       <!-- <small [class.text-danger]="msg.status--500">{{msg}}</small>  -->
+      <div class="form-group">
+          <label for="email" ><strong style="color: teal;">Email id:</strong></label><br>
+          <input type="email" class="form-control"  
+           placeholder="enter email" name="email"[(ngModel)]="Subscriber.emailId" required
+           pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+           [class.is-invalid]="email.invalid && email.touched">
+          <div *ngIf="email.errors && (email.invalid && email.touched)">
+              <small class="text-danger" *ngIf="email.errors.required">Email Id is required field</small>
+              <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email id</small>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="username"><strong style="color: teal;">Full name:</strong></label>
+          <input type="text" class="form-control" placeholder="Full name" name="username" 
+          [(ngModel)]="Subscriber.userName" #username="ngModel" required 
+          [class.is-invalid]="username.invalid && username.touched" >
+          <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required field</small>           
+      </div>
+      
+      
+<!---------type of user-->
+
+<div class="form-group">
+  <label for="typeOfSubscriber"><strong style="color: teal;">Type of user</strong></label>
+  <input type="text" class="form-control" placeholder="Prepaid-Postpaid-Dongle" name="typeOfSubscriber" 
+  [(ngModel)]="Subscriber.typeOfSubscriber" #typeOfSubscriber="ngModel" required 
+  [class.is-invalid]="typeOfSubscriber.invalid && typeOfSubscriber.touched" >
+  <small class="text-danger" [class.d-none]="typeOfSubscriber.valid || typeOfSubscriber.untouched">TYpe of user is required field</small>           
+</div>
+
+
+<!-------mobile num-->
+<div class="form-group">
+  <label for="mobileNum"><strong style="color: teal;">Contact Number</strong></label>
+  <input type="text" class="form-control" placeholder="998764" name="mobileNum" 
+  [(ngModel)]="Subscriber.mobileNum" #mobileNum="ngModel" required 
+  [class.is-invalid]="mobileNum.invalid && mobileNum.touched" >
+  <small class="text-danger" [class.d-none]="mobileNum.valid || mobileNum.untouched">TYpe of user is required field</small>           
+</div>
+
+
+
+
+
+      <div class="form-group">
+          <label for="password"><strong style="color: teal;">Password:</strong></label><br>
+          <input type="password" class="form-control" placeholder="enter password" name="password" 
+          [(ngModel)]="Subscriber.password" #password="ngModel" required 
+          [class.is-invalid]="password.invalid && password.touched" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{5,}">                
+          <small class="text-danger" [class.d-none]="password.valid || password.untouched">
+              Must contain at least one  number and one uppercase and lowercase letter, and at least 5 or more characters</small>
+      </div> 
+
+      <div class="form-group">
+          <label for="password"><strong style="color: teal;">Confirm Password:</strong> </label><br>
+          <input type="password" class="form-control" 
+          placeholder="enter password again" name="cpassword" #cpassword="ngModel" (ngModel)="Subscriber.password" required 
+          [class.is-invalid]="cpassword.invalid && cpassword.touched">                
+          <small class="text-danger" [class.d-none]="(cpassword.value == password.value) || cpassword.untouched">
+              Password must be the same</small>
+      </div>
+      <form> <ngx-recaptcha2 #captchaElem [siteKey]="siteKey"></ngx-recaptcha2></form>  <br>              
+
+      <button type="submit" class="btn btn-info">Register</button>&nbsp;
+      <button type="reset" class="btn btn-info">Reset</button>
+      <small class="float-right" [routerLink]="['/sublogin']">
+          <button type="submit" class="btn btn-outline-info">login here</button>  
+      </small>        
+  </form>
+  </div>
+
+  </div>
+  <small class="text-danger">{{msg}}</small>  
+</div>
+</div>
+<br>   <br>   

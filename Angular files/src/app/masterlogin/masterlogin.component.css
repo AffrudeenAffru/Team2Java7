@@ -1,0 +1,11 @@
+.mask
+{
+    height:80vh !important;
+    width:90vw; 
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.mask button{
+    width:120px;
+    margin-left: 10px;
+}

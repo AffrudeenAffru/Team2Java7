@@ -1,0 +1,316 @@
+<header>
+
+  <nav class=" navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="abc" style="color: black;" >
+    <a class="navbar-brand" style="color:white"><button class="btn btn-dark" (click)="mainpagess()"> VoizFonica</button>   </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+            Prepaid
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan </a>
+            <a class="dropdown-item" >prepaid to postpaid</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Postpaid
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotobill()" >paybill</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Dongle
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+              Help
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="contactus()">contact us</a>
+              <a class="dropdown-item"  data-toggle="modal" data-target="#contactus" (click)="faq()">FAQ</a>
+              
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Career
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoJtitle()">Job titles</a>
+              <a class="dropdown-item" (click)="gotoJoffers()">Open offers</a>
+            </div>
+
+          </li>
+
+      </ul>
+      <ul class="navbar-nav ml-autoo">
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" > <i class="fa fa-user-circle-o" style="color: blueviolet;"></i><b> Welcome {{a}} !</b></a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" style="color: white;" (click)="reg()"> <i class="fa fa-user"></i> Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: white;" (click)="log()"><i class="fa fa-sign-in"></i>Login</a>
+        </li> -->
+     </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">register</button>
+      </form> -->
+    </div>
+    
+  </nav>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg">
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-md-6 mb-4"> 
+
+  <div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"> <strong>How do I contact customer care?</strong></h3>
+        <h5 class="dropdown-item" >
+            <pre style="color: rgb(71, 39, 129); "><strong>
+In case you wish to contact customer care, please go to contact us
+page and send a quary and send us..</strong></pre></h5>  </a>            
+<!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        </div> -->
+</div> <br>       
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;">  <strong>I want to view my current bill.</strong></h3>
+        <h4 class="dropdown-item">
+            <pre style="color: rgb(71, 39, 129);"><strong>
+Simply login at VoizFonica and go to Billing section to
+view your current bill.</strong></pre></h4>
+
+    </a>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div>
+<br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>I want to know about my current package</strong></h3>
+        <h4 class="dropdown-item" >
+            <pre style="color: rgb(71, 39, 129);"><strong>
+To view your current pack details, go to recharge plan 
+page and you can see your current plans</strong></pre></h4></a>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div><br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>I want to change my plan</strong></h3>
+    </a><h4 class="dropdown-item"  >
+        <pre style="color: rgb(71, 39, 129);"><strong>
+login at VoizFonica and go to Plan and take a new plan
+to change your recharge plan.</strong></pre></h4>
+
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div>
+
+
+
+</div>
+<div class="col-md-6 mb-4">
+
+  <div class="card-body card-body-cascade text-center">
+    <br><br><br><br><br>
+      <img src="../../assets/images/faq3.jpeg" style="width: 460px; height: 480px;"
+        >
+   
+  </div>
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="row">
+<div class="col-md-6 mb-4"> 
+
+
+
+<div class="card-body card-body-cascade text-center">
+    <br><br><br><br><br>
+      <img src="../../assets/images/faq2.jpeg" style="width: 460px; height: 480px;"
+        >
+   
+  </div>
+
+</div>
+<div class="col-md-6 mb-4">
+
+ 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>I want to activate/remove plan</strong></h3>
+    </a>
+    <h4 class="dropdown-item"  ><pre style="color: rgb(71, 39, 129); "><strong>
+Simply login at VoizFonica and go to Plan and you can 
+activate or remove the existing plan .</strong></pre></h4>
+
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div><br> <br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>I am unable to use internet in my plan</strong></h3>
+    </a>
+    <h4 class="dropdown-item"><pre style="color: rgb(71, 39, 129);"><strong>
+You can go to recharge plans and check if you have selected
+a plan with internet avialability, if it's not there, you can 
+change plan.</strong></pre></h4>
+
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div><br> <br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"> <strong>I want to view my past payments</strong></h3>
+    </a><h4 class="dropdown-item"><pre style="color: rgb(71, 39, 129); " ><strong>
+Simply login at VoizFonica and go to Billing section and go
+to Payments to view details of last 3 payments made.</strong></pre></h4>
+
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div><br> <br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;">  <strong>I want to know my current bill plan</strong></h3>
+    </a><h4 class="dropdown-item"> <pre style="color: rgb(71, 39, 129); " ><strong>
+Simply login at VoizFonica and go to Plan and View Plan to 
+view your current bill plan benefits.</strong></pre></h4>
+
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    </div> -->
+</div>
+</div>     
+
+</div>
+
+
+
+<div class="row">
+<div class="col-md-6 mb-4"> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>How can I check the list of plans ?</strong></h3>
+    </a>
+    <h4 class="dropdown-item"><pre style="color: rgb(71, 39, 129); " ><strong>
+To view list of plans available, go to recharge plan page 
+and you can see available plans</strong></pre></h4>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">                
+    </div> -->
+</div><br>
+
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>Recharge not reflecting on my account</strong></h3>
+    </a>
+    <h4 class="dropdown-item" ><strong>
+        <pre style="color: rgb(71, 39, 129); " >
+You can go to bills and check if you have put correct 
+credentials and accordingly you can change.And if all 
+credentials are correct,then send a quary to us in contact
+us page, we will get back to you.</pre></strong>     
+            </h4>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"></div> -->
+</div><br> <br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>Mobile Connection to Foreign National/Tourist</strong></h3>
+    </a>
+    <h4 class="dropdown-item"><pre style="color: rgb(71, 39, 129); " ><strong>
+Yes, there are plans for Foreign calls. select your plan
+accordingly.</strong></pre>
+    </h4>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown"></div> -->
+</div><br> <br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>How do I contact customer care?</strong></h3>
+    </a><h4 class="dropdown-item"><pre style="color: rgb(71, 39, 129); " ><strong>
+Simply go to contact us page and send a feedback or a quary
+We will get back to you.</strong></pre>
+    </h4>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">        
+    </div> -->
+</div><br> <br> 
+<div class="nav-item dropdown" style="background-color: white;">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <h3 style="color: teal;"><strong>I want to know my balance and validity</strong></h3>
+    </a><h4 class="dropdown-item"><pre style="color: rgb(71, 39, 129); " > <strong>           
+Simply login at VoizFonica and go to recharge plans section 
+and your current plan. There all details will be given.
+    </strong></pre></h4>
+    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">        
+    </div> -->
+</div>
+
+
+
+</div>
+<div class="col-md-6 mb-4">
+
+<div class="card-body card-body-cascade text-center">
+<br><br><br><br><br>
+<img src="../../assets/images/faq1.jpeg" style="width: 460px; height: 480px;"
+>
+
+</div>
+</div>
+
+
+</div>
+</div>

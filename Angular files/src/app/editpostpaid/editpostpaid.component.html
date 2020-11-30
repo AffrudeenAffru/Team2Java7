@@ -1,0 +1,26 @@
+<app-body></app-body>
+<!----postpaid-->
+<div class="container">
+    <button type="button" class="btn btn-success btn-lg btn-block" >Edit  postpaid plans</button>
+    <form #adduserform="ngForm" (ngSubmit)="updatePostpaidformsubmit()">
+       
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="postpaid.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="emailId:">emailId:</label>
+            <input type="text" class="form-control" required [(ngModel)]="postpaid.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">username:</label>
+            <input type="text" class="form-control" required [(ngModel)]="postpaid.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">password:</label>
+        <input type="text" class="form-control" required [(ngModel)]="postpaid.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">Update plan</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistpostpaid()">back</button>
+    </form>
+</div>

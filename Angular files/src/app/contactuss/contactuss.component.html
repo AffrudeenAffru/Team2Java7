@@ -1,0 +1,281 @@
+<header>
+
+  <nav class=" navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="abc" style="color: black;" >
+    <a class="navbar-brand" style="color:white"><button class="btn btn-dark" (click)="mainpagess()"> VoizFonica</button>   </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+            Prepaid
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan </a>
+            <a class="dropdown-item" >prepaid to postpaid</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Postpaid
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotobill()" >paybill</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Dongle
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+              Help
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="contactus()">contact us</a>
+              <a class="dropdown-item"  data-toggle="modal" data-target="#contactus" (click)="faq()">FAQ</a>
+              
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Career
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoJtitle()">Job titles</a>
+              <a class="dropdown-item" (click)="gotoJoffers()">Open offers</a>
+            </div>
+
+          </li>
+
+      </ul>
+      <ul class="navbar-nav ml-autoo">
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" > <i class="fa fa-user-circle-o" style="color: blueviolet;"></i><b> Welcome {{a}} !</b></a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" style="color: white;" (click)="reg()"> <i class="fa fa-user"></i> Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: white;" (click)="log()"><i class="fa fa-sign-in"></i>Login</a>
+        </li> -->
+     </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">register</button>
+      </form> -->
+    </div>
+    
+  </nav>
+
+</header>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+      <div class="card shadow" style="width: 20rem;height: 400px;">
+      <div class="inner">
+        <img src="../../assets/images/bu1 (1).jpeg " class="card-img-top" alt="card image cap">
+      </div>
+     
+      <div class="card-body; text-center">
+        <h5 class="card-title"></h5>
+        <pre class="card-text">
+Delhi Office – Gate No. 3
+Jeevan Tara Building,
+Sansad Marg, 
+New Delhi-110001          
+Ph:   (011) - 2344 4400      
+e-mail: Delhi@VoizFonica.com</pre>
+        <a href="https://www.google.com/maps/place/%E0%A6%A6%E0%A6%BF%E0%A6%B2%E0%A7%8D%E0%A6%B2%E0%A6%BF/@28.6307993,77.2056747,13.75z/data=!4m5!3m4!1s0x390cfd5b347eb62d:0x37205b715389640!8m2!3d28.7040592!4d77.1024902"
+         class="w3-text w3-padding w3-teal w3-hide-small">Visit Delhi Branch</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card shadow" style="width: 20rem;height: 400px;">
+    <div class="inner">
+      <img src="../../assets/images/bu2.jpeg" class="card-img-top" alt="card image cap">
+    </div>
+   
+    <div class="card-body; text-center">
+      <h5 class="card-title"></h5>
+      <pre class="card-text">
+ Chennai Regional Office
+ Royal Insurance Building
+ 12, J. Tata Road,Ground Floor
+ Chennai 400 020.
+ Phone No.: 022- 22898600
+ e-mail: Chennai@VoizFonica.com</pre>
+      <a href="https://www.google.com/maps/place/%E0%A6%9A%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%A8%E0%A6%BE%E0%A6%87,+%E0%A6%A4%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%B2%E0%A6%A8%E0%A6%BE%E0%A6%A1%E0%A7%81/@13.0875202,80.2574898,14z/data=!4m5!3m4!1s0x3a5265ea4f7d3361:0x6e61a70b6863d433!8m2!3d13.0826802!4d80.2707184"
+       class="w3-text w3-padding w3-teal w3-hide-small">Visit Chennai Branch</a>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="card shadow" style="width: 20rem;height: 400px;">
+  <div class="inner">
+    <img src="../../assets/images/bu3.jpeg" class="card-img-top" alt="card image cap">
+  </div>
+ 
+  <div class="card-body; text-center">
+    <h5 class="card-title"> </h5>
+    <pre class="card-text">
+Bangalore Regional Office
+Custom Building
+150, N C ghosh Sarani,
+Bangalore 400 020.  
+Phone No.: 8144352075
+e-mail: Bangalore@VoizFonica.com</pre>   
+ <a href="https://www.google.com/maps/place/%E0%A6%AC%E0%A7%87%E0%A6%99%E0%A7%8D%E0%A6%97%E0%A6%BE%E0%A6%B2%E0%A7%81%E0%A6%B0%E0%A7%81,+%E0%A6%95%E0%A6%B0%E0%A7%8D%E0%A6%A3%E0%A6%BE%E0%A6%9F%E0%A6%95/@12.9800365,77.5924769,14.21z/data=!4m5!3m4!1s0x3bae1670c9b44e6d:0xf8dfc3e8517e4fe0!8m2!3d12.9715987!4d77.5945627" 
+ class="w3-text w3-padding w3-teal w3-hide-small">Visit Bangalore branch</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+
+<div class="row" style="background-color: rgb(202, 202, 202);">
+
+  <div class="col-md-6 mb-4">
+<pre style="font-family:verdana;font-size:20px">     
+  
+
+
+
+
+          VoizFonica is a Mobile Network Operator and telephone company. 
+  VoizFonica provides  network  access  and  telecommunication  services
+  that help people and companies communicate in an easy, efficient and
+  environmentally friendly way.
+
+          VoizFonica  business  is  very  technology dependent as company
+ acts as a network service provider (NSP) in mobile.</pre>
+  </div>
+    <div class="col-md-6 mb-4"><br><br>
+      <div class="card card-cascade narrower">
+        <div class="view view-cascade gradient-card-header blue-gradient">
+          <h5 class="mb-0; text-center">Main Branch</h5>
+        </div>
+        <div class="card-body card-body-cascade text-center">
+          <div id="map-container-google-8" class="z-depth-1-half map-container-5" style="height: 300px">
+            <iframe src="https://maps.google.com/maps?q=new%20delphi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div><br><br>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">  Contact Us</span></div>
+      <h3>  Address</h3>
+      <pre>
+  Delhi Office – Gate No. 3
+  Jeevan Tara Building,
+  Sansad Marg, New Delhi-110001</pre>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  Delhi, India</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i> 8144350275</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  Delhi@VoizFonica.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+     
+      <button type="submit" class="w3-button w3-right w3-theme"> <a href = "mailto:voizeFonica@gmail.com?subject = Feedback&body = Message">
+        Send Feedback
+        </a></button>
+      </form>
+    </div>
+  </div>
+</div>
+<br><br>
+<!-- Image of location/map -->
+<!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;"> -->
+
+<!-- Footer -->
+
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+

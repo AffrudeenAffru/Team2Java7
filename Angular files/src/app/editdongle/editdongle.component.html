@@ -1,0 +1,26 @@
+<app-body></app-body>
+<!----dongle-->
+<div class="container"><br>
+    <button type="button" class="btn btn-info btn-lg btn-block" >Edit dongle plans</button>
+    <form #adduserform="ngForm" (ngSubmit)="updateDongleformsubmit()">
+       
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="text" class="form-control" required [(ngModel)]="dongle.id" name="id" disabled>
+        </div>
+        <div class="form-group">
+            <label for="emailId:">emailId:</label>
+            <input type="text" class="form-control" required [(ngModel)]="dongle.emailId" name="emailId">
+        </div>
+        <div class="form-group">
+            <label for="userName">username:</label>
+            <input type="text" class="form-control" required [(ngModel)]="dongle.userName" name="userName">
+        </div>
+        <div class="form-group">
+        <label for="password">password:</label>
+        <input type="text" class="form-control" required [(ngModel)]="dongle.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-success">Update plan</button>
+    <button type="button" class="btn btn-primary" (click)="gotolistdongle()">back</button>
+    </form>
+</div>

@@ -1,0 +1,151 @@
+
+<header>
+
+    <nav class=" navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="abc" style="color: black;" >
+      <a class="navbar-brand" style="color:white" (click)="mainpage()"><button class="btn btn-dark">VoizFonica</button></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+              Prepaid
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+              <a class="dropdown-item" (click)="gotoplans()" >view plan </a>
+              <a class="dropdown-item" >prepaid to postpaid</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                Postpaid
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" (click)="gotobill()" >paybill</a>
+              <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                Dongle
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+              <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+                Help
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" (click)="contactus()">contact us</a>
+                <a class="dropdown-item"  data-toggle="modal" data-target="#contactus" (click)="faq()">FAQ</a>
+                <!-- <a class="dropdown-item" routerLink="/subchat">live chat </a> -->
+              </div>
+            </li>
+  
+  
+  
+  
+  
+  
+        </ul>
+        <ul class="navbar-nav ml-autoo">
+          <li class="nav-item">
+              <a class="nav-link" style="color: white;" (click)="reg()"> <i class="fa fa-user"></i> Register</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white;" (click)="log()"><i class="fa fa-sign-in"></i>Login</a>
+          </li>
+       </ul>       
+      </div>
+    </nav>
+  
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="allpage" style="background-image: url(../../assets/images/log2.jpeg);" >
+    
+    <div class="container" >
+        <div class="row">
+            <div style="height: 25vh;"></div>
+        </div>
+        <div class="row">
+         
+            <div class="col-md-6 mb-4">         
+                <!-- <div >
+                    <img src="../../assets/images/log3.jpg" style="width: 500px; height: 650px; align-items: top ;"> 
+                </div> -->
+            </div>
+    
+    
+            <div class="col-md-6 mb-4">
+                <!-- <br><br><br><br><br><br><br> -->
+                <div class="layout">
+                <!-- <strong style="margin-left: 40%;color: rgb(1, 102, 102);">Login</strong> -->
+        
+                <form #loginForm="ngForm" (ngSubmit)="loginUser2()">
+                 <small class="text-danger">{{msg}}</small>
+            <!-- <span class="boxed"  style="border:  1px solid rgb(0, 0, 0);
+         width: 300px; height: 280px; 
+         display:inline-block;  background-color: rgb(255, 255, 255) " class="center"> -->
+                 <div class="form-group">
+                <label for="email" ><strong style="color: teal;"> Email id:</strong></label><br>
+    
+                <input type="email" class="form-control"  
+                 placeholder="enter email" name="email"[(ngModel)]="subscriber.emailId" required
+                 pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" #email="ngModel"
+                 [class.is-invalid]="email.invalid && email.touched">
+    
+                <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small> -->
+                 <div *ngIf="email.errors && (email.invalid && email.touched)">
+                    <small class="text-danger" *ngIf="email.errors.required">Email Id is required field</small>
+                    <small class="text-danger" *ngIf="email.errors.pattern">Enter a valid email id</small>
+                </div>
+                 </div>
+                <div class="form-group">
+                    <label for="password"><strong style="color: teal;">Password:</strong></label><br>
+                    <input type="password" class="form-control" 
+                    placeholder="enter password" name="password" [(ngModel)]="subscriber.password" required #password="ngModel"
+                    [class.is-invalid]="password.invalid && password.touched">                
+                    <small class="text-danger" [class.d-none]="password.valid || password.untouched">
+                        Password Id is required field</small>
+                </div>
+                <div class="checkbox" >
+                    <label><input type="checkbox" name="remember" > Remember me</label>
+
+
+                    <small class="float-right" >
+                      <a  (click)="gotoForgetPassword()" > <b><u>Forget Password</u> </b></a>
+                      
+                    </small>
+
+
+                    
+                </div>
+                <button type="submit" class="btn btn-info"> Login </button>
+                <small class="float-right" (click)="gotoregistration2()">
+                    
+                    <button type="submit" class="btn btn-outline-info">Register</button></small>
+            
+                <!-- </span> -->
+        </form>
+        </div>
+        </div>
+        </div>
+        
+    </div>
+    </div>

@@ -1,0 +1,196 @@
+
+<header>
+
+  <nav class=" navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="abc" style="color: black;" >
+    <a class="navbar-brand" style="color:white"><button class="btn btn-dark" (click)="mainpagess()"> VoizFonica</button>   </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+            Prepaid
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan </a>
+            <a class="dropdown-item" >prepaid to postpaid</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Postpaid
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotobill()" >paybill</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Dongle
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoplans()">Recharge</a>
+            <a class="dropdown-item" (click)="gotoplans()" >view plan</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"style="color: white;">
+              Help
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="contactus()">contact us</a>
+              <a class="dropdown-item"  data-toggle="modal" data-target="#contactus" (click)="faq()">FAQ</a>
+              
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+              Career
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" (click)="gotoJtitle()">Job titles</a>
+              <a class="dropdown-item" (click)="gotoJoffers()">Open offers</a>
+            </div>
+
+          </li>
+
+      </ul>
+      <ul class="navbar-nav ml-autoo">
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" > <i class="fa fa-user-circle-o" style="color: blueviolet;"></i><b> Welcome {{a}} !</b></a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" style="color: white;" (click)="reg()"> <i class="fa fa-user"></i> Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: white;" (click)="log()"><i class="fa fa-sign-in"></i>Login</a>
+        </li> -->
+     </ul>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">register</button>
+      </form> -->
+    </div>
+    
+  </nav>
+
+</header>
+<br><br>
+
+<div class="helloguys">
+<!-- <p>welcome logged in as:{{a}}</p> -->
+<div class="container">
+  <br>
+  <!-- <h2 style="text-align: center;"class="text-success" class="rounded-pill"><b>PREPAID PLANS</b></h2> -->
+  <button type="button" class="btn btn-primary btn-lg btn-block">Prepaid plans</button>
+
+    <table class="table table-striped">
+      <thead  style="background-color: white;">
+        <tr>
+            <th>id</th>
+          <th>plans</th>
+          <th>validity</th>
+          <th>price</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prepaid of _prepaidlist">
+        <!-- <tr *ngFor="let prepaid of _prepaidlist"> -->
+          <td>{{prepaid.id}}</td>
+          <td>{{prepaid.emailId}}</td>
+          <td>{{prepaid.userName}}</td>
+          <td>{{prepaid.password}}</td>
+          <td>
+              <button type="button" class="btn btn-primary" (click)="goToEditPrepaid(prepaid.id)">Buy</button>&nbsp;&nbsp;&nbsp;
+  
+          </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+    
+  </div>
+<br><br><br>
+<!------------------------------------------------------------------------------------------------->
+  <!----postpaid-->
+  <br>
+  <div class="container">
+    <!-- <h2 style="text-align: center;"class="text-success"><b>POSTPAID PLANS</b></h2>          -->
+    <button type="button" class="btn btn-success btn-lg btn-block " >Postpaid plans</button>
+    <!-- <button data-toggle="collapse" data-target="#demo">Collapsible</button> -->
+    <table class="table table-striped">
+      <thead  id="demo"style="background-color: white;">
+        <tr>
+            <th>id</th>
+          <th>plans</th>
+          <th>validity</th>
+          <th>price</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let postpaid of _postpaidlist">
+        <!-- <tr *ngFor="let prepaid of _prepaidlist"> -->
+          <td>{{postpaid.id}}</td>
+          <td>{{postpaid.emailId}}</td>
+          <td>{{postpaid.userName}}</td>
+          <td>{{postpaid.password}}</td>
+          <td>
+              <button type="button" class="btn btn-success" (click)="goToEditPostpaid(postpaid.id)">Buy</button>&nbsp;&nbsp;&nbsp;
+         </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+  </div>
+
+
+
+
+  <br><br><br>
+
+  <!-------------------------->
+  <!----dongle-->
+  <br>
+  <div class="container">
+    <!-- <h2 style="text-align: center;"class="text-success"><b>DONGLE PLANS</b></h2> -->
+     <button type="button" class="btn btn-info btn-lg btn-block" >Dongle plans</button>
+         
+    <table class="table table-striped">
+      <thead style="background-color: white;">
+        <tr>
+            <th>id</th>
+          <th>plans</th>
+          <th>validity</th>
+          <th>price</th>
+          <th>actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dongle of _donglelist">
+        <!-- <tr *ngFor="let prepaid of _prepaidlist"> -->
+          <td>{{dongle.id}}</td>
+          <td>{{dongle.emailId}}</td>
+          <td>{{dongle.userName}}</td>
+          <td>{{dongle.password}}</td>
+          <td>
+              <button type="button" class="btn btn-info" (click)="goToEditDongle(dongle.id)">buy</button>&nbsp;&nbsp;&nbsp;
+       </td>
+        </tr>    
+      </tbody>
+ 
+    </table>
+  </div>
+  <br>
+  <br>
+   <br>
+   <br> <br>
+    <br> <br>
+
+   
+    </div>

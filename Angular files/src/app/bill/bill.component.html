@@ -1,0 +1,108 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	<a class="navbar-brand" (click)="gotorelog()" > welcome</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+	  <ul class="navbar-nav ml-auto">
+	   
+		<li class="nav-item">
+		  <a class="nav-link"(click)="gotorecharge()">Available plans</a>
+		</li>
+		<li class="nav-item">
+		  <a class="nav-link "(click)="gotocontactus()">Contact us</a>
+		</li>
+		<li class="nav-item active">
+		  <a class="nav-link"(click)="gotomaster()">Logout </a>
+		</li>
+	  </ul>
+	</div>
+  </nav>
+<!----------main bill -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div id="table">
+<div class="container">
+	<div class="row">
+		<h2>Challan Design for Property tax</h2>	
+			<div class="table-responsive">
+                <div class="table-responsive custom_datatable">						
+					<table class="table table-bordered" style="width:100%;margin:auto;text-align:left;" >
+                        <tbody>										
+							<tr>
+                                <td rowspan="2" colspan="2"><h3 style="margin:8px 0 0 63px;">BANK TITLE HERE</h3></td>
+                                <td>Challan NO</td>
+								<td colspan="2">123456</td>
+                            </tr>									
+                            <tr>
+                                <td>Date</td>  
+								<td colspan="2">28/01/2017</td>  											
+                            </tr>
+							<tr>
+								<td colspan="2">Bank Name / Branch : </td>
+								<td colspan="3">Bank Name / Branch Name Here</td>
+							</tr>
+							<tr>
+								<td colspan="2">Tax Period</td>
+								<td colspan="3">20_ _ to 20_ _</td>
+							</tr>
+                            <tr>
+                                <td>Building Owner Name</td>
+                                <td colspan="1">Ward, Block and Door #, Assessment #,UPI #</td>
+                                <td width="150">Tax Details</td>
+                                <td width="50">RS</td>
+								<td width="50">00</td>
+                            </tr>	
+							<tr>
+								<td rowspan="6">Santhosh Poojary Keyyur</td>
+								<td rowspan="6" width="50%">PERLAGURY CROSS ROAD.<br> 3rd Block , Floore #24 <br> Ass 123456, PID -123456	</td>
+								<td>Property Tax</td>
+								<td>500</td>	
+								<td>00</td>
+							</tr>
+							<tr>	
+								<td>CESS%</td>
+								<td>120</td>
+								<td>00</td>
+							</tr>
+							<tr>
+								<td>SWM CESS</td>
+								<td>120</td>
+								<td>00</td>
+							</tr>
+							<tr>
+								<td>Adjustment if any</td>
+								<td>120</td>
+								<td>00</td>
+							</tr>
+							<tr>
+								<td>Penalty </td>
+								<td>120</td>
+								<td>00</td>
+							</tr>
+							<tr>
+								<td>Total</td>
+								<td>580</td>
+								<td>00</td>
+							</tr>
+							<tr>
+								<td colspan="5">Amount in words :Five Thousand Eighty Rupees Only</td>
+							</tr>
+							<tr>
+								<td>Depositer Signature</td>
+								<td>Account #</td>
+								<td>Office Manager signature</td>
+								<td colspan="2">Cashier Signature <br><br></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div> 
+		</div>
+	</div>
+</div>
+	<button type="button" class="btn btn-success"(click)="download()">Download bill</button>
+

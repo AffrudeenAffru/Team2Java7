@@ -1,0 +1,29 @@
+<app-body>
+
+</app-body>
+
+
+
+<div class="container">
+  <br>
+  <button _ngcontent-nhq-c65="" type="button" class="btn btn-primary btn-lg btn-block">view Admin details</button>           
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>emailId</th>
+          <th>userName</th>
+          <th>password</th>        
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{product.id}}</td>
+          <td>{{product.emailId}}</td>
+          <td>{{product.userName}}</td>
+          <td>{{product.password}}</td>          
+        </tr>                
+      </tbody> 
+    </table>    
+    <button type="button" class="btn btn-primary" (click)="gotolist()">back</button>
+  </div>
